@@ -1,45 +1,45 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Firmware update</title>
-		<link rel="stylesheet" href="/style.css">
+ <head>
+  <meta charset="utf-8">
+  <title>固件更新</title>
+  <link rel="stylesheet" href="/style.css">
         <script src="/main.js"></script>
-	</head>
-	<body onload="startup()">
-		<div id="m">
-			<h1>FIRMWARE UPDATE</h1>
-			<p id="hint">You are going to update <strong>firmware</strong> on the device.<br>Please, choose file from your local hard drive and click <strong>Upload</strong> button.</p>
-			<form id="form">
-				<div id="mtd_layout" style="display: none;">
-					<div id="current_mtd_layout"></div>
-					<br>
-					Choose mtd layout:	
-					<select id="mtd_layout_label" name="mtd_layout_label"></select>
-					<br><br>
-				</div>
-				<input id="file" type="file" name="firmware">
-				<input type="button" value="Upload" onclick="upload('firmware')">
-			</form>
-			<div>
-				<div class="bar" id="bar" style="display: none; --percent: 0;"></div>
-			</div>
-			<div id="size" style="display: none;">Size: xxxx</div>
-			<div id="md5" style="display: none;">MD5: xxxx</div>
-			<div id="mtd" style="display: none;">MTD layout: xxxx</div>
-			<div id="upgrade" style="display: none;">
-				<p>The firmware has been uploaded, please click "Update"</p>
-				<button class="button" onclick="location = '/flashing.html'">Update</button>
-			</div>
-			<div class="i w">
-				<strong>WARNINGS</strong>
-				<ul>
-					<li>do not power off the device during update</li>
-					<li>if everything goes well, the device will restart</li>
-					<li>you can upload whatever you want, so be sure that you choose proper firmware image for your device</li>
-				</ul>
-			</div>
-		</div>
+ </head>
+ <body onload="startup()">
+  <div id="m">
+   <h1>固件更新</h1>
+   <p id="hint">您即将更新设备的<strong>固件</strong>。<br>请从本地硬盘选择文件并点击<strong>上传</strong>按钮。</p>
+   <form id="form">
+    <div id="mtd_layout" style="display: none;">
+     <div id="current_mtd_layout"></div>
+     <br>
+     选择MTD布局:	
+     <select id="mtd_layout_label" name="mtd_layout_label"></select>
+     <br><br>
+    </div>
+    <input id="file" type="file" name="firmware">
+    <input type="button" value="上传" onclick="upload('firmware')">
+   </form>
+   <div>
+    <div class="bar" id="bar" style="display: none; --percent: 0;"></div>
+   </div>
+   <div id="size" style="display: none;">大小: xxxx</div>
+   <div id="md5" style="display: none;">MD5: xxxx</div>
+   <div id="mtd" style="display: none;">MTD布局: xxxx</div>
+   <div id="upgrade" style="display: none;">
+    <p>固件已上传，请点击“更新”</p>
+    <button class="button" onclick="location = '/flashing.html'">更新</button>
+   </div>
+   <div class="i w">
+    <strong>警告</strong>
+    <ul>
+     <li>更新过程中请勿断电</li>
+     <li>一切顺利的话，设备将重新启动</li>
+     <li>您可以上传任何文件，因此请确保选择适用于您设备的正确固件镜像</li>
+    </ul>
+   </div>
+  </div>
         <div id="version"></div>
-	</body>
+ </body>
 </html>
